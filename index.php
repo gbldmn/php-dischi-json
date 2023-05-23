@@ -11,15 +11,37 @@
 <body>
    
     <div id="app">
-        <h1>casa</h1>
-
-        <div>
-            <ul>
-                <li v-for="(elem,index) in data" :key="index">
-                    <img :src="elem.poster" alt="">
-                </li>
-            </ul>
+      <div class="wrapper">
+        <div class="container3">
+            <div class="container2 d-flex align-items-center">
+                <img class="dimenziona" src="img/download-s.png" alt="">
+            </div>
         </div>
+
+    
+        <div class="container">
+                    <div class="row row-cols-3 justify-content-center d-flex flex-wrap">
+                        <div v-for="(elem, index) in data" :key="index"  class="col dab d-flex flex-column justify-content-between">
+                            <div class="card-image mb-3">
+                                <img :src="elem.poster" :alt="elem.author">
+                            </div>
+                            <div class="card-text d-flex flex-column text-center">
+                                <span class="title">
+                                    {{ elem.title }}
+                                </span>
+                                <span class="author">
+                                    {{ elem.author }}
+                                </span>
+                                <span class="year">
+                                    {{ elem.year }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+
+
+     </div>
     </div>
 
 

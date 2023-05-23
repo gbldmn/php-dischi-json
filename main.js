@@ -4,7 +4,8 @@ createApp({
     data() {
         return {
            apiCall: 'server.php',
-           data: '' 
+           data: '',
+    
         }
     },
     methods: {
